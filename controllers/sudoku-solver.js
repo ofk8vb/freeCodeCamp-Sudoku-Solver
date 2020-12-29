@@ -29,7 +29,10 @@ class SudokuSolver {
 
   //helper function that checks if the provided arguments are valid
   argumentValidator(row,col,value,Rows){
-    if((value.toString()).length!==1 || 0===value || value>9){
+    if(0>=Number(value) || Number(value)>9){
+      return 'Invalid value'
+    }
+    if(isNaN(value)){
       return 'Invalid value'
     }
     if(!(Rows.includes(row))){

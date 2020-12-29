@@ -19,7 +19,8 @@ module.exports = function (app) {
       //coordinate is a letter A-I followed by number 1-9
       let row = coordinate[0];
       let column = Number(coordinate[1]);
-
+      value=Number(value);
+      console.log(value);
       if(solver.argumentValidator(row,column,value,Rows)!==true){
         return res.send({error: solver.argumentValidator(row,column,value,Rows)})
       }
